@@ -22,7 +22,7 @@ overflow:hidden;
 color:white;
 }
 
-/* BACKGROUND */
+
 .bg{
 position:fixed;
 inset:0;
@@ -33,7 +33,7 @@ linear-gradient(120deg,#04050a,#070b14,#02030a);
 z-index:-3;
 }
 
-/* soft glow */
+
 .glow{
 position:absolute;
 width:500px;
@@ -51,7 +51,7 @@ animation:float 12s ease-in-out infinite alternate;
 to{transform:translate(100px,80px);}
 }
 
-/* PARTICLES */
+
 .p{
 position:absolute;
 width:2px;
@@ -67,7 +67,7 @@ from{transform:translateY(0);}
 to{transform:translateY(-120vh);}
 }
 
-/* CURSOR GLOW */
+
 .cursor{
 position:fixed;
 width:220px;
@@ -79,7 +79,7 @@ pointer-events:none;
 z-index:5;
 }
 
-/* MAIN */
+
 .container{
 height:100vh;
 display:flex;
@@ -125,7 +125,7 @@ from{transform:translateX(-120%) rotate(25deg);}
 to{transform:translateX(120%) rotate(25deg);}
 }
 
-/* IMAGE */
+
 img{
 width:140px;
 height:140px;
@@ -135,7 +135,7 @@ border:3px solid rgba(255,215,120,.9);
 box-shadow:0 0 35px rgba(255,215,120,.35);
 }
 
-/* TEXT */
+
 h1{
 font-size:clamp(45px,6vw,80px);
 margin-top:18px;
@@ -186,7 +186,7 @@ body{overflow:auto;}
 img{width:110px;height:110px;}
 }
 
-/* FIREWORK CANVAS */
+
 canvas{
 position:fixed;
 top:0;
@@ -245,7 +245,7 @@ Digital Eid Celebration
 
 <script>
 
-/* AUDIO */
+
 const audio = document.getElementById("bgm");
 
 window.addEventListener("load",()=>{
@@ -256,7 +256,7 @@ document.body.addEventListener("click",()=>{
 audio.play();
 },{once:true});
 
-/* CURSOR */
+
 const cursor=document.getElementById("cursor");
 
 document.addEventListener("mousemove",(e)=>{
@@ -264,7 +264,7 @@ cursor.style.left=e.clientX+"px";
 cursor.style.top=e.clientY+"px";
 });
 
-/* PARTICLES */
+
 for(let i=0;i<90;i++){
 let p=document.createElement("div");
 p.className="p";
@@ -282,7 +282,7 @@ p.style.animationDelay=(-Math.random()*20)+"s";
 document.body.appendChild(p);
 }
 
-/* ================= FIREWORKS ================= */
+
 
 const canvas = document.getElementById("fireworks");
 const ctx = canvas.getContext("2d");
@@ -364,7 +364,7 @@ requestAnimationFrame(loop);
 
 loop();
 
-/* RESIZE */
+
 window.addEventListener("resize",()=>{
 canvas.width=window.innerWidth;
 canvas.height=window.innerHeight;
